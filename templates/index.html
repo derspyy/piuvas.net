@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{{ get_url(path="intro.css")}}">
+</head>
+<body>
+    <a href="https://twitter.com/bjarkboof">
+    <img src="img/belle0.png" alt="Icon made by @bjarkboof :)" class="belle"></img></a>
+    <p class="piuvas">Piuvas</p>
+<!--
+    <div class="text"><p>this the website where i plan to leave some information for ppl who wish to get in contact, as well as an excuse for me to get into web design</p><p>have a great day ;)</p></div>
+-->
+    <a href="/blog" style="text-decoration:none;"><div class="terminal">
+        <p class="terminal-text">> acesse meu blog</p>
+        <br>
+        <p class="terminal-text">user@piuvas.net ~ $ cd ./posts/</p><p class="cursor">_</p>
+    </div></a>
+    <br>
+    <nav class="icons">
+            <a href="mailto:mail@piuvas.net" alt="E-Mail">
+            <img src="img/mail.svg"width=36px></img></a>
+            <a href="https://eldritch.cafe/@piuvas" alt="Fediverse">
+            <img src="img/mastodon.svg"width=32px></img></a>
+            <a href="@piuvas:matrix.org" alt="Matrix">
+            <img src="img/matrix.svg"width=32px></img></a>
+        </nav>
+    <div class="text">
+        <p>icones por <a href=https://simpleicons.org>simple-icons</a> e <a href=https://iconic.app>iconicicons</a>.</p>
+    </div>
+    <div class="icons">
+        <a href="https://github.com/derspyy/website" alt="Source Code">
+        <img src="img/github.svg"width=32px></img></a>
+    </div>
+</body>
+{% endblock content %}

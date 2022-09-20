@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav>
+    user@piuvas.net
+    <a href="/">~</a>/<a href="/blog">posts</a>
+</nav>
+<h1 class="title">
+    {{ section.title }}<p class="cursor">_</p>
+</h1>
+<ul class="list">
+    <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
+    {% for page in section.pages %}
+    > {{ page.slug }}.md - <a href="{{ page.permalink | safe }}">{{ page.title }}</a>  de {{ page.date }} - {{ page.reading_time }} min<br>
+    {% endfor %}
+</ul>
+<br>
+<a href="/"><p>$ cd ..</p></a>
+{% endblock content %}
