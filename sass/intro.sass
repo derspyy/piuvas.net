@@ -28,16 +28,24 @@
     background-color:#191724
     max-width: 500px
     border-radius: 10px
+    text-align-last: left
 %terminal-text
-    width: auto
     background-color:#00000000
     color:#e0def4
     padding: 10px
     font-family: 'mononoki', sans-serif
-    text-align: left
     text-align-last: left
-.terminal-text
+%inlining-bs
+    display: inline-block
+    padding: 0px
+    padding-bottom: 10px
+.terminal-text1
     @extend %terminal-text
+.terminal-text2
+    @extend %terminal-text
+    @extend %inlining-bs
+    padding-left: 10px
 .cursor
     @extend %terminal-text
+    @extend %inlining-bs
 
