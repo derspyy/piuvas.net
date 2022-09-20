@@ -9,9 +9,10 @@
     {{ section.title }}<p class="cursor">_</p>
 </h1>
 <ul class="list">
-    <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
     {% for page in section.pages %}
-    > {{ page.slug }}.md - <a href="{{ page.permalink | safe }}">{{ page.title }}</a>  de {{ page.date }} - {{ page.reading_time }} min<br>
+    > {{ page.slug }}.md - <a href="{{ page.permalink | safe }}"><b></bold>{{ page.title }}</b></a>
+    <p>| de {{ page.date }} • {{ page.reading_time }} min</p>
+    <br>
     {% endfor %}
 </ul>
 <br>
