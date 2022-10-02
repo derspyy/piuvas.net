@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+<head>
+    <link rel="stylesheet" href="{{ get_url(path="blog.css")}}">
+</head>
 <nav>
     user@piuvas.net
     <a href="/">~</a>/<a href="/blog/">posts</a> $ cat {{ page.slug }}.md

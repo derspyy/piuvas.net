@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
+<head>
+    <link rel="stylesheet" href="{{ get_url(path="blog.css")}}">
+</head>
 <nav>
     user@piuvas.net
     <a href="/">~</a>/<a href="/blog/">posts</a>
@@ -10,7 +13,7 @@
 </h1>
 <ul class="list">
     {% for page in section.pages %}
-    > {{ page.slug }}.md - <a href="{{ page.permalink | safe }}"><b></bold>{{ page.title }}</b></a>
+    > <a href="{{ page.permalink | safe }}">{{ page.slug }}.md</a> - <b></bold>{{ page.title }}</b>
     <p>| de {{ page.date }} • {{ page.reading_time }} min</p>
     <br>
     {% endfor %}
