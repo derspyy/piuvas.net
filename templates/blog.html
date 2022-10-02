@@ -13,11 +13,11 @@
 </h1>
 <ul class="list">
     {% for page in section.pages %}
-    > <a href="{{ page.permalink | safe }}">{{ page.slug }}.md</a> - <b></bold>{{ page.title }}</b>
-    <p>| de {{ page.date }} • {{ page.reading_time }} min</p>
+    . <a href="{{ page.permalink | safe }}">{{ page.slug }}.md</a> - {{ page.title }}
+    <div>└── de {{ page.date }} • {{ page.reading_time }} min</div>
     <br>
     {% endfor %}
 </ul>
 <br>
-<a href="/"><p>$ cd ..</p></a>
+<a href="/">$ cd ..</a>
 {% endblock content %}
