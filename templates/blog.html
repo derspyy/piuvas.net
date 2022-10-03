@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
+{% block sass %}
+<link rel="stylesheet" href="{{ get_url(path="blog.css")}}">
+{% endblock sass %}
+
 {% block content %}
-<head>
-    <link rel="stylesheet" href="{{ get_url(path="blog.css")}}">
-</head>
 <nav>
     user@piuvas.net
     <a href="/">~</a>/<a href="/blog/">posts</a>

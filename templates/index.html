@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
+{% block sass %}
+<link rel="stylesheet" href="{{ get_url(path="intro.css")}}">
+{% endblock sass %}
+
 {% block content %}
-<head>
-    <link rel="stylesheet" href="{{ get_url(path="intro.css")}}">
-</head>
 <body>
     <a href="https://twitter.com/bjarkboof">
     <img src="img/belle0.png" alt="Icon made by @bjarkboof :)" class="picture"></img></a>
