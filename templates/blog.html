@@ -10,9 +10,11 @@
     <a href="/">~</a>/<a href="/blog/">posts</a>
     <a href="{{ get_url(path="rss.xml")}}"><img src="{{ get_url(path="img/rss.svg")}}" /></a>
 </nav>
+<br>
 <h1 class="title">
     {{ section.title }}<p class="cursor">_</p>
 </h1>
+<br>
 <ul class="list">
     {% for page in section.pages %}
     . <a href="{{ page.permalink | safe }}">{{ page.slug }}.md</a> - {{ page.title }}
