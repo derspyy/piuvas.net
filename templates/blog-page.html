@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 
-{% block sass %}
+{% block head %}
 <link rel="stylesheet" href="{{ get_url(path="blog.css")}}">
-{% endblock sass %}
+
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ current_url }}" />
+<meta property="og:description" content="{{ page.reading_time }} min" />
+<meta property="article:published_time" content="{{ page.date }}" />
+{% endblock head %}
 
 {% block content %}
 <nav>

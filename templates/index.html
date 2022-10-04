@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 
-{% block sass %}
-<link rel="stylesheet" href="{{ get_url(path="intro.css")}}">
-{% endblock sass %}
+{% block head %}
+<link rel="stylesheet" href="{{ get_url(path="intro.css") }}">
+
+<meta property="og:title" content="Piuvas" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ current_url }}" />
+<meta property="og:description" content="bem-vindo ao meu site :)" />
+{% endblock head %}
 
 {% block content %}
 <body>

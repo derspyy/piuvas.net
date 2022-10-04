@@ -7,9 +7,9 @@
     <title>$ piuvas_</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% block rss %}
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
     {% endblock %}
-    {% block sass %} {% endblock %}
+    {% block head %} {% endblock %}
 </head>
 
 <body>
