@@ -6,35 +6,45 @@ body
     margin: auto
     max-width: 800px
     padding: 20px
-h1, h2, h3, h4, h5, h6
-    text-align: center
-p
-    font-family: Lexend Deca, sans-serif
-    text-align: justify
+img.rss
+        width: 16px
+        float: right
+        opacity: 10%
+        &:hover
+            opacity: 100%
 a
     color:#e0def4
-blockquote
-    background-color:#1f1d2e
-    font-size: 14px
-    padding: 10px
-    border-radius: 5px
-pre
-    border-radius: 5px
-    padding: 10px
+    text-decoration-style: dotted
+::selection
+    background: #26233a
 .title
     text-align: center
+    color:#e0def4
 .subtitle
     text-align: center
     color:#403d52
     font-family: mononoki, sans-serif
-img
-    width: 16px
-    float: right
-    opacity: 10%
-    &:hover
-        opacity: 100%
-ol
-    font-family: Lexend Deca, sans-serif
-    text-align: justify
-::selection
-    background: #26233a
+.post
+    h1, h2, h3, h4, h5, h6
+        text-align: right
+        color:#f6c177
+    p
+        font-family: Lexend Deca, sans-serif
+        text-align: justify
+    a
+        color:#9ccfd8
+        font-family: mononoki, sans-serif
+
+    blockquote
+        background-color:#1f1d2e
+        font-size: 14px
+        padding: 10px
+        border-radius: 5px
+    pre
+        border-radius: 5px
+        padding: 10px
+    ol
+        font-family: Lexend Deca, sans-serif
+        text-align: justify
+    li::marker
+        color:#ebbcba
