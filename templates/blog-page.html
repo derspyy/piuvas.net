@@ -23,9 +23,11 @@
 </h1>
 <p class="subtitle"><strong>{{ page.date }}</strong></p>
 <br>
+<hr>
 <div class="post">
 {{ page.content | safe }}
 </div>
+<hr>
 <br>
-<a href="/blog/">$ cd .</a>
+<a href="/blog/"><img src="{{ get_url(path="img/corner-down-left.svg") }}" width=14px /> cd .</a>
 {% endblock content %}

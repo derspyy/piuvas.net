@@ -1,4 +1,5 @@
 @import common
+@import url('https://api.fonts.coollabs.io/css2?family=Atkinson+Hyperlegible&display=swap')
 body
     background-color:#191724
     font-family: mononoki, sans-serif
@@ -13,8 +14,13 @@ img.rss
         &:hover
             opacity: 100%
 a
+    text-decoration: none
     color:#e0def4
-    text-decoration-style: dotted
+hr
+    width: 100%
+    background-color:#21202e
+    height: 1px
+    border: none
 ::selection
     background: #26233a
 .title
@@ -24,16 +30,31 @@ a
     text-align: center
     color:#403d52
     font-family: mononoki, sans-serif
+.list
+    a
+        color:#ebbcba
+        text-decoration: underline
 .post
+    
+    background-color: 
+    font-family: 'Atkinson Hyperlegible', sans-serif
     h1, h2, h3, h4, h5, h6
         text-align: right
-        color:#f6c177
+        color:#ebbcba
     p
-        font-family: Lexend Deca, sans-serif
+        font-family: 'Atkinson Hyperlegible', sans-serif
         text-align: justify
     a
         color:#9ccfd8
-        font-family: mononoki, sans-serif
+        text-decoration: underline
+    .zola-anchor
+        text-decoration: none
+        color:#f6c177
+        font-size: 10px
+        vertical-align: middle
+        opacity: 10%
+        &:hover
+            opacity: 100%
 
     blockquote
         background-color:#1f1d2e
