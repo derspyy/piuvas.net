@@ -36,7 +36,7 @@ As redes sociais são muito mais complexas nesse sentido, pois dependem da aprop
 
 Entendendo isso, é fácil sonhar com um mundo ideal na internet. Talvez alguns desenvolvedores independentes decidam hospedar uma rede social nova, sem anúncios, sem acumulação de dados e com a intenção de ser o mais livre e transparente com os usuários, possível. Dessa ideia vieram as redes federadas, como o Fediverse, que utiliza o [ActivityPub](https://activitypub.rocks/) para manter comunicação entre diversos servidores diferentes, essencialmente sem centralizar nenhum dado em nenhuma das redes.
 
-Porém, é muito difícil manter algum serviço na internet quando o financiamento adversário provém dos dados dos usuários. Por isso a decentralização na internet é importante[^1]. Além de dividir os dados, os hospedeiros dividem os custos de hospedagem da rede em prol da comunidade.
+Porém, é muito difícil manter algum serviço na internet quando o financiamento adversário provém dos dados dos usuários. Por isso a decentralização na internet é importante (Exceto se depender de abuso de poder de computação ou acumulação de dinheiro virtual 🙄). Além de dividir os dados, os hospedeiros dividem os custos de hospedagem da rede em prol da comunidade.
 
 Por fim, resolvi deixar aqui uma pequena lista de serviços gratuitos que respeitam a privacidade do usuário e apresentam-se como uma alternativa competente para serviços dos Gigantes da Internet.
 
@@ -45,5 +45,3 @@ Por fim, resolvi deixar aqui uma pequena lista de serviços gratuitos que respei
 * [Signal](https://signal.org/) - serviço de mensagens criptografadas e SMS.
 * [Quad9](https://quad9.net/) - resolvedor de DNS.
 * [Aegis](https://getaegis.app/) - autenticador de duas etapas.
-
-[^1]: Exceto se depender de abuso de poder de computação ou acumulação de dinheiro virtual. 🙄
