@@ -1,10 +1,14 @@
 @import common
 @import url('https://api.fonts.coollabs.io/css2?family=Lexend+Deca:wght@400;800&display=swap')
-*
+body
     background-color:#8754B3
     text-align: justify
     text-align-last: center
     font-family: 'Lexend Deca', sans-serif
+    max-width: 500px
+    margin: auto
+    padding: 10px
+*
     color:#15003d
     text-decoration-style: dotted
 .picture
@@ -16,17 +20,16 @@
     margin-bottom: 0
     font-weight: 800
     font-size: 100px
-.text
-    margin: auto
-    max-width: 500px
 .icons
     padding: 5px
     display: inline-block
+.creds
+    opacity: 50%
 .terminal
+    width
+    border-radius: 10px
     margin: auto
     background-color:#191724
-    max-width: 500px
-    border-radius: 10px
     text-align-last: left
 %terminal-text
     background-color:#00000000
@@ -34,18 +37,12 @@
     padding: 10px
     font-family: 'mononoki', sans-serif
     text-align-last: left
-%inlining-bs
-    display: inline-block
-    padding: 0px
-.terminal-text1
+.terminal-text
     @extend %terminal-text
-.terminal-text2
-    @extend %terminal-text
-    @extend %inlining-bs
     padding-left: 10px
 .cursor
     @extend %terminal-text
-    @extend %inlining-bs
+    padding: 0px
 ::selection
     background: #00000016
 
