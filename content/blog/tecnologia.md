@@ -1,7 +1,7 @@
 +++
 title = "alienação causada pela tecnologia"
 date = 2022-10-03
-updated = 2022-10-07
+updated = 2022-10-22
 +++
 
 Gostei da ideia de definir tecnologia como qualquer uma das invenções cujo usuário não, intuitivamente, entende o funcionamento. 
