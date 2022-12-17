@@ -13,9 +13,7 @@ Por exemplo: um livro é impresso em papel com uma capa dura de papelão e uma s
 No mundo dos eletrônicos modernos, nós somos ensinados a utilizar aparelhos e serviços mesmo sem compreendê-los: imagine uma máquina agrícola. Seria o operador dessa ferramenta incentivado a operá-la sem ler o manual e possuir a aptidão técnica necessária? Não, porque há um risco evidente e é necessário saber o que está fazendo. 
 
 Por outro lado, o usuário comum de um celular não costuma compreender _como_ seu aparelho recebe e transmite informações, mas sim que o faz, e isso é o suficiente para utilizá-lo para ver notícias, conversar com outras pessoas e compartilhar sua semana nas redes sociais. 
-
 # Capitalismo de vigilância
-
 Você provavelmente já viu um destes em algum website: 
 
 > "Ao clicar em Cadastre-se, você concorda com nossos [Termos](https://pt-br.facebook.com/legal/terms/update), [Política de Privacidade](https://pt-br.facebook.com/about/privacy/update) e [Política de Cookies](https://pt-br.facebook.com/policies/cookies/)." — Facebook
