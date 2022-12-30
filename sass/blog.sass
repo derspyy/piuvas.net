@@ -1,66 +1,28 @@
 @import common
 @import url('https://api.fonts.coollabs.io/css2?family=Atkinson+Hyperlegible&display=swap')
-body
-    background-color:#191724
-    font-family: mononoki, sans-serif
-    color:#e0def4
-    margin: auto
-    max-width: 800px
-    padding: 20px
-img.rss
-        width: 16px
-        float: right
-a
-    text-decoration: none
-    color:#e0def4
-hr
-    width: 100%
-    background-color:#21202e
-    height: 1px
-    border: none
-table
-    display: block
-    max-width: fit-content
-    overflow: scroll
-    margin: auto
-td
-    background-color:#1f1d2e
-pre
-    display: block
-    overflow: scroll
-::selection
-    background: #26233a
-.title
-    text-align: center
-    color:#e0def4
 .subtitle
     text-align: center
-    color:#403d52
+    color: $subtle
     font-family: mononoki, sans-serif
-.list
-    a
-        color:#ebbcba
-        text-decoration: underline
 .post
     font-family: 'Atkinson Hyperlegible', sans-serif
     h1, h2, h3, h4, h5, h6
         text-align: right
-        color:#ebbcba
+        color: $rose
     p
         text-align: justify
     a
-        color:#9ccfd8
+        color: $foam
         text-decoration: underline
     .zola-anchor
         text-decoration: none
-        font-size: 10px
+        font-size: 1em
         vertical-align: middle
-        opacity: 10%
+        opacity: 50%
         &:hover
             opacity: 100%
-
     blockquote
-        background-color:#1f1d2e
+        background-color: $surface
         font-size: 14px
         padding: 5px
         border-radius: 5px
@@ -71,4 +33,18 @@ pre
         font-family: Lexend Deca, sans-serif
         text-align: justify
     li::marker
-        color:#ebbcba
+        color: $rose
+    table
+        display: block
+        max-width: fit-content
+        overflow: scroll
+        margin: auto
+    tr:nth-child(odd)
+        background: $surface
+    tr:nth-child(even)
+        background: $overlay
+    th, td
+        padding: 0.5em
+    pre
+        display: block
+        overflow: scroll

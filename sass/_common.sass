@@ -1,11 +1,43 @@
-@keyframes cursor
-    from
-        visibility: visible
-    to
-        visibility: hidden
-.cursor
-    animation: cursor 1s steps(2,start) infinite
+$base: #191724
+$surface: #1f1d2e
+$overlay: #26233a
+$muted: #6e6a86
+$subtle: #908caa
+$text: #e0def4
+$love: #eb6f92
+$gold: #f6c177
+$rose: #ebbcba
+$pine: #31748f
+$foam: #9ccfd8
+$iris: #c4a7e7
+$low: #21202e
+$med: #403d52
+$high: #524f67
+
 @font-face
     font-family: 'mononoki'
     src: url(font/mononoki-Regular.otf)
     font-display: swap
+body
+    background-color: $base
+    font-family: mononoki, sans-serif
+    color: $text
+    margin: auto
+    max-width: 800px
+    padding: 20px
+img.rss
+    width: 1em
+    float: right
+a
+    text-decoration: underline dotted
+    color: $iris
+hr
+    width: 100%
+    background-color: $low
+    height: 1px
+    border: none
+
+::selection
+    background: $overlay
+.title
+    text-align: center

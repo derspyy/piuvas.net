@@ -1,47 +1,44 @@
 @import common
-@import url('https://api.fonts.coollabs.io/css2?family=Lexend+Deca:wght@400;800&display=swap')
-body
-    background-color:#8754B3
-    text-align: justify
-    text-align-last: center
-    font-family: 'Lexend Deca', sans-serif
-    max-width: 500px
-    margin: auto
-    padding: 10px
-*
-    color:#15003d
-    text-decoration-style: dotted
-.picture
-    margin-top: 32px
-    width: 256px
-    border-radius: 50%
-.piuvas
-    margin-top: 0
-    margin-bottom: 0
-    font-weight: 800
-    font-size: 6em
-.icons
-    padding: 5px
-    display: inline-block
-.creds
-    opacity: 50%
-.terminal
-    border-radius: 10px
-    margin: auto
-    background-color:#191724
-    text-align-last: left
-%terminal-text
-    background-color:#00000000
-    color:#e0def4
-    padding: 10px
-    font-family: 'mononoki', sans-serif
-    text-align-last: left
-.terminal-text
-    @extend %terminal-text
-    padding-left: 10px
+@keyframes cursor
+    from
+        visibility: visible
+    to
+        visibility: hidden
 .cursor
-    @extend %terminal-text
-    padding: 0px
-::selection
-    background: #00000016
+    animation: cursor 1s steps(2,start) infinite
+.list
+    .date
+        color: $muted
+.grid
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    > *
+        margin: 0.25em
+    > div
+        border-bottom: 1px solid $low
+    > picture
+        height: 128px
+.intro
+    flex: 99 1 16em
+    min-width: 16em
+    text-align: justify
+    padding: 0.5em
+    height: 112px
+.social
+    flex: 1 0 15em
+    display: flex
+    flex-flow: column wrap
+    justify-content: space-evenly
+    padding: 1em
+    height: 96px
+.blog
+    padding: 1em
+    margin: 0.25em
+.svg
+    img
+        vertical-align: middle
+        width: 1em
+.source
+    text-align: center
 

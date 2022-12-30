@@ -12,34 +12,64 @@
 
 {% block content %}
 
+<nav>
+    user@piuvas.net ~
+</nav>
+<br>
+<div class="grid">
+    <picture>
+        <source srcset="img/capivara.avif"/>
+        <img src="img/capivara.png" alt="Imagem de uma capivara com dithering"/>
+    </picture>
+    <div class="social">
+        <div class="svg"><img src="img/discord.svg" alt="Discord"/>
+        piuvas#6132
+        </div>
 
-<div class="terminal">
-    <p class="terminal-text">user@piuvas.net ~ $ cat index.html</p>
+        <div class="svg"><img src="img/mail-plus.svg" alt="E-Mail"/>
+        <a href="mailto:mail@piuvas.net">
+        mail@piuvas.net
+        </a>
+        </div>
+
+        <div class="svg"><img src="img/mastodon.svg" alt="Mastodon"/>
+        <a href="https://eldritch.cafe/@piuvas">
+        piuvas@eldritch.cafe
+        </a>
+        </div>
+
+        <div class="svg"><img src="img/matrix.svg" alt="Matrix"/>
+        <a href="https://matrix.to/#/@piuvas:matrix.org">
+        piuvas@matrix.org
+        </a>
+        </div>
+    </div>
+    <div class="intro">
+    esse site serve pra deixar algumas informações de contato e eu também escrevo um blog sobre qualquer coisa que vier na cabeça então não espere nada de mais
+    </div>
 </div>
-<picture>
-    <source srcset="img/belle0.avif" type="image/avif">
-    <img src="img/belle0.png" alt="Desenho da Belle do Petscop por @bjarkboof" class="picture"></img>
-</picture>
-<p class="piuvas">piuvas</p>
-<p>bem-vindo ao meu site :)</p>
-<p>piuvas e so uma palavra que eu achei engraçada</p>
-<p>esse site serve pra deixar algumas informações de contato e eu também escrevo um blog sobre qualquer coisa que vier na cabeça então não espere nada de mais</p>
-<a href="mailto:mail@piuvas.net" alt="E-Mail" class="icons">
-<img src="img/mail.svg"width=32px></img></a>
-<a rel="me" href="https://eldritch.cafe/@piuvas" alt="Mastodon" class="icons">
-<img src="img/mastodon.svg"width=32px></img></a>
-<a href="https://matrix.to/#/@piuvas:matrix.org" alt="Matrix" class="icons">
-<img src="img/matrix.svg"width=32px></img></a>
-<a href="/blog/" style="text-decoration:none;"><div class="terminal">
-    <p class="terminal-text">user@piuvas.net ~ $ cd blog/<span class="cursor">_</span></p>
-</div></a>
-<div class="creds">
-    <p>ícones por <a href=https://lucide.dev>lucide</a> e <a href=https://simpleicons.org/>simple-icons</a>.</p>
-    <p>desenho da belle pelo <a href=https://twitter.com/bjarkboof>archer</a>.</p>
-    <p>paleta de cores <a href=https://rosepinetheme.com>rosé pine</a>.</p>
+
+<div class="blog">
+    $ cd blog/
+    <a href="{{ get_url(path="rss.xml")}}"><img class="rss" src="{{ get_url(path="img/rss.svg") }}" alt="Feed RSS" /></a>
+    <h1 class="title">
+        {{ section.title }}<span class="cursor">_</span>
+    </h1>
+    <br>
+    <ul class="list">
+        {% for page in section.pages %}
+        . <a href="{{ page.permalink | safe }}">{{ page.slug }}.md</a> - {{ page.title }}
+        <div class="date">└── de {{ page.date }} • {{ page.reading_time }} min</div>
+        <br>
+        {% endfor %}
+    </ul>
+
 </div>
-<div class="creds">
-    <a href="https://github.com/derspyy/piuvas.net" alt="Source Code">
-    <img src="img/github.svg"width=32px></img></a>
+<hr>
+<p style="text-align: center"><a href="https://fediring.net/previous?host=piuvas.net"><</a> <a href="https://fediring.net">fediring</a> <a href="https://fediring.net/next?host=piuvas.net">></a></p>
+<div class="source">
+    <a href="https://github.com/derspyy/piuvas.net" class="svg">
+        <img src="img/code-2.svg"/>
+    </a>
 </div>
 {% endblock content %}

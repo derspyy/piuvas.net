@@ -14,7 +14,7 @@
 {% block content %}
 <nav>
     user@piuvas.net
-    <a href="/">~</a>/<a href="/blog/">blog</a> $ cat {{ page.slug }}.md
+    <a href="/">~/blog</a> $ cat {{ page.slug }}.md
 </nav>
 <br>
 <h1 class="title">
@@ -28,6 +28,6 @@
 </div>
 <hr>
 <br>
-<a href="/blog/"><img src="{{ get_url(path="img/corner-down-left.svg") }}" width=14px /> cd .</a>
-<a href="{{ get_url(path="rss.xml")}}"><img class="rss" src="{{ get_url(path="img/rss.svg")}}" /></a>
+<a href="/">< cd /</a>
+<a href="{{ get_url(path="rss.xml")}}"><img class="rss" src="{{ get_url(path="img/rss.svg")}}" alt="Feed RSS" /></a>
 {% endblock content %}
