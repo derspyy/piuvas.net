@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="icon" href="data:,">
     <title>$ piuvas_</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% block rss %}
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") }}">
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
     {% endblock %}
     {% block head %} {% endblock %}
     <meta property="og:site_name" content="$ piuvas_" />

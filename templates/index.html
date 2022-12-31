@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-<link rel="stylesheet" href="{{ get_url(path="intro.css") }}">
+<link rel="stylesheet" href="intro.css">
 
 <meta name="theme-color" content="#c4a7e7" />
 <meta property="og:title" content="Piuvas" />
@@ -51,7 +51,7 @@
 
 <div class="blog">
     $ cd blog/
-    <a href="{{ get_url(path="rss.xml")}}"><img class="rss" src="{{ get_url(path="img/rss.svg") }}" alt="Feed RSS" /></a>
+    <a href="rss.xml"><img class="rss" src="img/rss.svg" alt="Feed RSS" /></a>
     <h1 class="title">
         {{ section.title }}<span class="cursor">_</span>
     </h1>
