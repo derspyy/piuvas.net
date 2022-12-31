@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title></title>
+        <link>https://piuvas.net</link>
+        <description></description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://piuvas.net/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Fri, 16 Dec 2022 00:00:00 +0000</lastBuildDate>
+        <item>
+            <title>velvet</title>
+            <pubDate>Fri, 16 Dec 2022 00:00:00 +0000</pubDate>
+            <link>https://piuvas.net/proj1/</link>
+            <guid>https://piuvas.net/proj1/</guid>
+            <description>&lt;p&gt;Em dezembro do ano passado, em um hotel, eu tive uma ideia. Era um momento de relaxamento e calma: eram as férias. Mesmo assim, essa ideia consumiu meus pensamentos e eu não consegui esperar. Eu instalei o &lt;a href=&quot;https:&#x2F;&#x2F;obsidian.md&#x2F;&quot;&gt;Obsidian&lt;&#x2F;a&gt; no celular para documentar o projeto do início ao fim.&lt;&#x2F;p&gt;
+&lt;p&gt;A ideia veio da dificuldade de administrar os diversos mods de Minecraft que são comumente instalados para lidar com o desempenho do jogo. Quem jogou Minecraft moderno sabe que além de instalar o Fabric, é necessário manter-se informado sobre o ecossistema de mods de otimização do jogo, principalmente após a queda do OptiFine. Para pessoas que querem apenas jogar o jogo, essa dinâmica não é ideal. &lt;&#x2F;p&gt;
+&lt;p&gt;O objetivo principal era instalar o Fabric e organizar os mods em pastas separadas pela versão do jogo para que o usuário possa, simultaneamente, manter diversas instalações com suas respectivas pastas de mod.&lt;&#x2F;p&gt;
+&lt;p&gt;No início, eu não tinha acesso ao computador e não podia testar código algum ou colocar meus pensamentos em prática. Uma consequência interessante disso foi que pude conceitualizar o projeto inteiro antes de escrever o código.&lt;&#x2F;p&gt;
+&lt;p&gt;Eu sabia que queria os meus mods na estrutura &lt;code&gt;.minecraft&#x2F;.woven&#x2F;mods&#x2F;&amp;lt;versão&amp;gt;&lt;&#x2F;code&gt;. O nome do subdiretório &lt;code&gt;.woven&lt;&#x2F;code&gt; é derivado de Fabric: um nome apropriado para o projeto.&lt;&#x2F;p&gt;
+&lt;p&gt;O Fabric sempre lê os mods na pasta &lt;code&gt;.minecraft&#x2F;mods&lt;&#x2F;code&gt;, então teria que ser modificado para lidar com a pasta de mods dinamicamente. Daí veio a primeira dificuldade: programar em Java. Eu tenho pouca experiência com Java, mas como seria um pequeno &lt;em&gt;patch&lt;&#x2F;em&gt; no código, eu pensei que seria simples o suficiente.&lt;&#x2F;p&gt;
+&lt;p&gt;Meus três objetivos iniciais foram definidos: modificar o Fabric, instalá-lo e baixar os mods.&lt;&#x2F;p&gt;
+&lt;p&gt;Uma vantagem de dividir as etapas antes de começar a programar é que você fica preso às ideias originais e não começa a adicionar funções novas com o tempo.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;em-pratica&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#em-pratica&quot; aria-label=&quot;Anchor link for: em-pratica&quot;&gt;🔗&lt;&#x2F;a&gt;Em prática&lt;&#x2F;h1&gt;
+&lt;p&gt;Eu comecei a programar o programa em Rust, essa escolha foi definida desde o início do projeto. Modificar o Fabric seria simples. Em sua inicialização, ele já sabe a versão na qual o jogo está rodando. O maior problema foi na instalação.&lt;&#x2F;p&gt;
+&lt;p&gt;O launcher do Minecraft trabalha com JSON. A biblioteca &lt;a href=&quot;https:&#x2F;&#x2F;serde.rs&#x2F;&quot;&gt;serde&lt;&#x2F;a&gt; possui todas as ferramentas necessárias para lidar com as principais estruturas de dados. Porém, eu senti medo porque todos os exemplos da biblioteca tinham muitas coisas que eu ainda não havia aprendido. Por causa disso, eu deixei o projeto de lado.&lt;&#x2F;p&gt;
+&lt;p&gt;Em novembro, pouco mais de nove meses depois, eu lembrei do projeto e continuei de onde tinha parado. Porém, pelo intervalo de tempo, algumas coisas mudaram.&lt;&#x2F;p&gt;
+&lt;p&gt;Primeiro, um &lt;em&gt;fork&lt;&#x2F;em&gt; do Fabric, &lt;a href=&quot;https:&#x2F;&#x2F;quiltmc.org&quot;&gt;Quilt&lt;&#x2F;a&gt;, implementou a função a passar uma pasta de mods dinâmica usando apenas opções da JVM. Por causa disso, eu optei pelo Quilt porque, então, não precisaria manter minha própria modificação do Fabric e um Maven para distribuição.&lt;&#x2F;p&gt;
+&lt;p&gt;Segundo, eu descobri um projeto com o nome &amp;quot;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;WovenMC&quot;&gt;WovenMC&lt;&#x2F;a&gt;&amp;quot; e decidi mudar para &amp;quot;Velvet&amp;quot;.&lt;&#x2F;p&gt;
+&lt;p&gt;Por fim, eu escrevi toda a instalação do Quilt e usei a biblioteca &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;ferinth&quot;&gt;ferinth&lt;&#x2F;a&gt; para comunicar com o API do Modrinth, uma plataforma de mods que amadureceu durante o ano, e instalar os mods.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusao&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#conclusao&quot; aria-label=&quot;Anchor link for: conclusao&quot;&gt;🔗&lt;&#x2F;a&gt;Conclusão&lt;&#x2F;h1&gt;
+&lt;p&gt;É interessante pensar que eu demorei quase um ano para trazer uma pequena ideia à vida. Às vezes, abandonamos projetos porque nos vemos longe demais de concluí-los.&lt;&#x2F;p&gt;
+&lt;p&gt;Meu principal relato é que o sentimento de retomar um projeto com conhecimento e energia suficiente para terminá-lo é muito gratificante.&lt;&#x2F;p&gt;
+&lt;p&gt;Por causa disso, documentar o processo é uma etapa importante. A principal vantagem dessa experiência foi manter comigo minhas anotações do início até o final.&lt;&#x2F;p&gt;
+&lt;p&gt;O código do projeto está disponível &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;derspyy&#x2F;velvet&quot;&gt;aqui&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</description>
+        </item>
+        <item>
+            <title>alienação causada pela tecnologia</title>
+            <pubDate>Mon, 03 Oct 2022 00:00:00 +0000</pubDate>
+            <link>https://piuvas.net/tecnologia/</link>
+            <guid>https://piuvas.net/tecnologia/</guid>
+            <description>&lt;p&gt;Gostei da ideia de definir tecnologia como qualquer uma das invenções cujo usuário não, intuitivamente, entende o funcionamento. &lt;&#x2F;p&gt;
+&lt;p&gt;Por exemplo: um livro é impresso em papel com uma capa dura de papelão e uma sobrecapa plástica; a técnica de impressão é usada para marcar, no papel, as letras que formam a palavra. Por mais que você não saiba como a madeira torna-se papel e o petróleo torne-se plástico com os respectivos termos técnicos, é possível abstrair a ideia de que algo que foi encontrado foi manipulado para alcançar uma nova finalidade. Um livro não é o que a maioria das pessoas chama tecnológico. Já um computador, por onde começar? &lt;&#x2F;p&gt;
+&lt;p&gt;É infinitamente mais difícil explicar um circuito lógico do que a impressão de tinta sobre o papel, e diversos tipos de circuitos são necessários para que uma máquina seja considerada um computador. Isso é tecnológico.&lt;&#x2F;p&gt;
+&lt;p&gt;No mundo dos eletrônicos modernos, nós somos ensinados a utilizar aparelhos e serviços mesmo sem compreendê-los: imagine uma máquina agrícola. Seria o operador dessa ferramenta incentivado a operá-la sem ler o manual e possuir a aptidão técnica necessária? Não, porque há um risco evidente e é necessário saber o que está fazendo. &lt;&#x2F;p&gt;
+&lt;p&gt;Por outro lado, o usuário comum de um celular não costuma compreender &lt;em&gt;como&lt;&#x2F;em&gt; seu aparelho recebe e transmite informações, mas sim que o faz, e isso é o suficiente para utilizá-lo para ver notícias, conversar com outras pessoas e compartilhar sua semana nas redes sociais. &lt;&#x2F;p&gt;
+&lt;h1 id=&quot;capitalismo-de-vigilancia&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#capitalismo-de-vigilancia&quot; aria-label=&quot;Anchor link for: capitalismo-de-vigilancia&quot;&gt;🔗&lt;&#x2F;a&gt;Capitalismo de vigilância&lt;&#x2F;h1&gt;
+&lt;p&gt;Você provavelmente já viu um destes em algum website: &lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;Ao clicar em Cadastre-se, você concorda com nossos &lt;a href=&quot;https:&#x2F;&#x2F;pt-br.facebook.com&#x2F;legal&#x2F;terms&#x2F;update&quot;&gt;Termos&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;pt-br.facebook.com&#x2F;about&#x2F;privacy&#x2F;update&quot;&gt;Política de Privacidade&lt;&#x2F;a&gt; e &lt;a href=&quot;https:&#x2F;&#x2F;pt-br.facebook.com&#x2F;policies&#x2F;cookies&#x2F;&quot;&gt;Política de Cookies&lt;&#x2F;a&gt;.&amp;quot; — Facebook&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Quem nunca ignorou os termos de uso que atire a primeira pedra. É normal. Vemos nossos amigos cadastrados em alguma rede com milhões de usuários e julgamos que, se houvesse algum problema, alguém teria protestado antes. &lt;&#x2F;p&gt;
+&lt;p&gt;Pode-se dizer que pular avisos de segurança e proteção de dados é como assinar um contrato sem lê-lo, mas o maior problema não é ignorar os termos, é não entendê-los. &lt;&#x2F;p&gt;
+&lt;p&gt;Mesmo que a página dissesse &amp;quot;Nós podemos ler suas mensagens privadas.&amp;quot;, &amp;quot;Vamos montar um perfil personalizado de você para vender para provedores de anúncio.&amp;quot; e &amp;quot;Mantemos o conteúdo deletado pelo usuário.&amp;quot;, devido à dificuldade de entender a terminologia, o usuário não saberia o que fazer com essas informações, parcialmente pela ignorância, mas principalmente pelo pensamento de que não tem nada que precise esconder.&lt;&#x2F;p&gt;
+&lt;p&gt;O conceito de &amp;quot;capitalismo de vigilância&amp;quot;, cunhado por Shoshana Zuboff, descreve exatamente a realidade do usuário comum da internet. O modelo pelo qual, principalmente, a Google e a Meta (a.k.a. Facebook) mantêm sua influência global (lembrando que ambos são conhecidos por serviços completamente gratuitos) é onde eles acumulam dados sobre todos os usuários vinculados &lt;a href=&quot;https:&#x2F;&#x2F;www.facebook.com&#x2F;policies&#x2F;cookies#:~:text=isso%20acontece%20independentemente%20de%20voce%20ter%20ou%20nao%20uma%20conta%20do%20facebook%20ou%20estar%20ou%20nao%20conectado%20a%20ela.%20&quot;&gt;ou não&lt;&#x2F;a&gt; à plataforma e constroem uma rede de publicidade para vender anúncios altamente direcionados.&lt;&#x2F;p&gt;
+&lt;p&gt;Porém, você pode exclamar, ninguém é obrigado a utilizar esses serviços!&lt;&#x2F;p&gt;
+&lt;p&gt;Mesmo que as pessoas escolham as redes pelas quais navegam, é importante lembrar-se de que o usuário nem sempre compreende o que está acontecendo entre seu clique e a visualização de conteúdo. Às vezes, os banners de anúncio são tão intrínsecos às páginas de algum site que vê-lo sem eles é perturbador. &lt;&#x2F;p&gt;
+&lt;h1 id=&quot;as-redes-sociais&quot;&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#as-redes-sociais&quot; aria-label=&quot;Anchor link for: as-redes-sociais&quot;&gt;🔗&lt;&#x2F;a&gt;As redes sociais&lt;&#x2F;h1&gt;
+&lt;p&gt;As redes sociais são muito mais complexas nesse sentido, pois dependem da apropriação da natureza social e cooperativa do ser humano, fazendo com que seus membros postem sobre suas vidas e convidem seus amigos às suas bolhas. Vendo por esse lado, fica claro que são o método perfeito para absorver dados para alimentar um serviço de publicidade e distribuir anúncios direcionados a determinados tipos de usuário. Falar sobre algum produto e começar e receber propagandas relacionadas é assustador, e o usuário não pode ter medo dos serviços que utiliza.&lt;&#x2F;p&gt;
+&lt;p&gt;Entendendo isso, é fácil sonhar com um mundo ideal na internet. Talvez alguns desenvolvedores independentes decidam hospedar uma rede social nova, sem anúncios, sem acumulação de dados e com a intenção de ser o mais livre e transparente com os usuários, possível. Dessa ideia vieram as redes federadas, como o Fediverse, que utiliza o &lt;a href=&quot;https:&#x2F;&#x2F;activitypub.rocks&#x2F;&quot;&gt;ActivityPub&lt;&#x2F;a&gt; para manter comunicação entre diversos servidores diferentes, essencialmente sem centralizar nenhum dado em nenhuma das redes.&lt;&#x2F;p&gt;
+&lt;p&gt;Porém, é muito difícil manter algum serviço na internet quando o financiamento adversário provém dos dados dos usuários. Por isso a descentralização na internet é importante (Exceto se depender de abuso de poder de computação ou acumulação de dinheiro virtual 🙄). Além de dividir os dados, os hospedeiros dividem os custos de hospedagem da rede em prol da comunidade.&lt;&#x2F;p&gt;
+&lt;p&gt;Por fim, resolvi deixar aqui uma pequena lista de serviços gratuitos que respeitam a privacidade do usuário e apresentam-se como uma alternativa competente para serviços dos Gigantes da Internet.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;duckduckgo.com&#x2F;&quot;&gt;DuckDuckGo&lt;&#x2F;a&gt; - mecanismo de busca.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;proton.me&quot;&gt;Proton&lt;&#x2F;a&gt; - provedor de e-mail, drive e calendário.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;signal.org&#x2F;&quot;&gt;Signal&lt;&#x2F;a&gt; - serviço de mensagens criptografadas e SMS.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;quad9.net&#x2F;&quot;&gt;Quad9&lt;&#x2F;a&gt; - resolvedor de DNS.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;getaegis.app&#x2F;&quot;&gt;Aegis&lt;&#x2F;a&gt; - autenticador de duas etapas.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</description>
+        </item>
+    </channel>
+</rss>

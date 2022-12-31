@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <title>$ piuvas_</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+    
+    
+<link rel="stylesheet" href="/blog.css">
+
+<meta name="theme-color" content="#191724" />
+<meta property="og:title" content="velvet" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:&#x2F;&#x2F;piuvas.net&#x2F;proj1&#x2F;" />
+<meta property="og:description" content="└── de 2022-12-16 • 4 min" />
+<meta property="article:published_time" content="2022-12-16" />
+
+    <meta property="og:site_name" content="$ piuvas_" />
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            
+<nav>
+    user@piuvas.net
+    <a href="/">~/blog</a> $ cat proj1.md
+</nav>
+<br>
+<h1 class="title">
+    velvet
+</h1>
+<p class="subtitle"><strong>2022-12-16</strong></p>
+<br>
+<hr>
+<div class="post">
+<p>Em dezembro do ano passado, em um hotel, eu tive uma ideia. Era um momento de relaxamento e calma: eram as férias. Mesmo assim, essa ideia consumiu meus pensamentos e eu não consegui esperar. Eu instalei o <a href="https://obsidian.md/">Obsidian</a> no celular para documentar o projeto do início ao fim.</p>
+<p>A ideia veio da dificuldade de administrar os diversos mods de Minecraft que são comumente instalados para lidar com o desempenho do jogo. Quem jogou Minecraft moderno sabe que além de instalar o Fabric, é necessário manter-se informado sobre o ecossistema de mods de otimização do jogo, principalmente após a queda do OptiFine. Para pessoas que querem apenas jogar o jogo, essa dinâmica não é ideal. </p>
+<p>O objetivo principal era instalar o Fabric e organizar os mods em pastas separadas pela versão do jogo para que o usuário possa, simultaneamente, manter diversas instalações com suas respectivas pastas de mod.</p>
+<p>No início, eu não tinha acesso ao computador e não podia testar código algum ou colocar meus pensamentos em prática. Uma consequência interessante disso foi que pude conceitualizar o projeto inteiro antes de escrever o código.</p>
+<p>Eu sabia que queria os meus mods na estrutura <code>.minecraft/.woven/mods/&lt;versão&gt;</code>. O nome do subdiretório <code>.woven</code> é derivado de Fabric: um nome apropriado para o projeto.</p>
+<p>O Fabric sempre lê os mods na pasta <code>.minecraft/mods</code>, então teria que ser modificado para lidar com a pasta de mods dinamicamente. Daí veio a primeira dificuldade: programar em Java. Eu tenho pouca experiência com Java, mas como seria um pequeno <em>patch</em> no código, eu pensei que seria simples o suficiente.</p>
+<p>Meus três objetivos iniciais foram definidos: modificar o Fabric, instalá-lo e baixar os mods.</p>
+<p>Uma vantagem de dividir as etapas antes de começar a programar é que você fica preso às ideias originais e não começa a adicionar funções novas com o tempo.</p>
+<h1 id="em-pratica"><a class="zola-anchor" href="#em-pratica" aria-label="Anchor link for: em-pratica">🔗</a>Em prática</h1>
+<p>Eu comecei a programar o programa em Rust, essa escolha foi definida desde o início do projeto. Modificar o Fabric seria simples. Em sua inicialização, ele já sabe a versão na qual o jogo está rodando. O maior problema foi na instalação.</p>
+<p>O launcher do Minecraft trabalha com JSON. A biblioteca <a href="https://serde.rs/">serde</a> possui todas as ferramentas necessárias para lidar com as principais estruturas de dados. Porém, eu senti medo porque todos os exemplos da biblioteca tinham muitas coisas que eu ainda não havia aprendido. Por causa disso, eu deixei o projeto de lado.</p>
+<p>Em novembro, pouco mais de nove meses depois, eu lembrei do projeto e continuei de onde tinha parado. Porém, pelo intervalo de tempo, algumas coisas mudaram.</p>
+<p>Primeiro, um <em>fork</em> do Fabric, <a href="https://quiltmc.org">Quilt</a>, implementou a função a passar uma pasta de mods dinâmica usando apenas opções da JVM. Por causa disso, eu optei pelo Quilt porque, então, não precisaria manter minha própria modificação do Fabric e um Maven para distribuição.</p>
+<p>Segundo, eu descobri um projeto com o nome &quot;<a href="https://github.com/WovenMC">WovenMC</a>&quot; e decidi mudar para &quot;Velvet&quot;.</p>
+<p>Por fim, eu escrevi toda a instalação do Quilt e usei a biblioteca <a href="https://crates.io/crates/ferinth">ferinth</a> para comunicar com o API do Modrinth, uma plataforma de mods que amadureceu durante o ano, e instalar os mods.</p>
+<h1 id="conclusao"><a class="zola-anchor" href="#conclusao" aria-label="Anchor link for: conclusao">🔗</a>Conclusão</h1>
+<p>É interessante pensar que eu demorei quase um ano para trazer uma pequena ideia à vida. Às vezes, abandonamos projetos porque nos vemos longe demais de concluí-los.</p>
+<p>Meu principal relato é que o sentimento de retomar um projeto com conhecimento e energia suficiente para terminá-lo é muito gratificante.</p>
+<p>Por causa disso, documentar o processo é uma etapa importante. A principal vantagem dessa experiência foi manter comigo minhas anotações do início até o final.</p>
+<p>O código do projeto está disponível <a href="https://github.com/derspyy/velvet">aqui</a>.</p>
+
+</div>
+<hr>
+<br>
+<a href="/">< cd /</a>
+<a href="/rss.xml"><img class="rss" src="/img/rss.svg" alt="Feed RSS" /></a>
+
+        </div>
+    </section>
+</body>
+</html>
