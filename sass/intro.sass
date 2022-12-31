@@ -15,23 +15,22 @@
     justify-content: center
     > *
         margin: 0.25em
+        height: 128px
     > div
         border-bottom: 1px solid $low
-    > picture
-        height: 128px
 .intro
     flex: 99 1 16em
     min-width: 16em
     text-align: justify
     padding: 0.5em
-    height: 112px
+    height: calc(128px - 1em)
 .social
     flex: 1 0 15em
     display: flex
     flex-flow: column wrap
     justify-content: space-evenly
     padding: 1em
-    height: 96px
+    height: calc(128px - 2em)
 .blog
     padding: 1em
     margin: 0.25em
@@ -39,6 +38,11 @@
     img
         vertical-align: middle
         width: 1em
-.source
+.center
     text-align: center
+.kbclub
+    color: $foam
+    text-align: center
+    a
+        color: $foam
 
